@@ -18,7 +18,7 @@ function ProtectedRoute({ requiredRole }) {
       }
 
       try {
-        const response = await fetch('http://10.71.144.216:5000/api/auth/me', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

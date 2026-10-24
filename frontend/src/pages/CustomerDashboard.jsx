@@ -12,8 +12,8 @@ import {
 import 'leaflet/dist/leaflet.css'
 import DriverLiveMap from '../components/DriverLiveMap'
 
-const API_URL = 'http://localhost:5000/api/rides'
-const PAYMENT_API_URL = 'http://localhost:5000/api/payments'
+const API_URL = `${import.meta.env.VITE_API_URL}/api/rides`
+const PAYMENT_API_URL = `${import.meta.env.VITE_API_URL}/api/payments`
 
 function CustomerDashboard() {
   const navigate = useNavigate()

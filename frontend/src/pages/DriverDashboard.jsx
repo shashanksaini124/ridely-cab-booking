@@ -64,7 +64,7 @@ function createVehicleIcon(rideType, heading = 0) {
 
 
 
-  const API_URL = 'http://10.71.144.216:5000/api/rides'
+  const API_URL = `${API_URL}/api/rides`
 
   
 const pickupIcon = new L.Icon({
@@ -641,7 +641,7 @@ const [statsData, setStatsData] = useState({
       const token = localStorage.getItem('ridelyToken')
 
       const response = await fetch(
-        'http://10.71.144.216:5000/api/auth/profile',
+        `${API_URL}/api/auth/profile`,
         {
           method: 'PATCH',
           headers: {
@@ -882,7 +882,7 @@ async function handleCashPaymentPaid(rideId) {
 
   try {
     const response = await fetch(
-      `http://10.71.144.216:5000/api/payments/cash/${rideId}/paid`,
+      `${API_URL}/api/payments/cash/${rideId}/paid`,
       {
         method: 'PATCH',
         headers: {

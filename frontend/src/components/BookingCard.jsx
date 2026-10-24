@@ -5,7 +5,7 @@ import { Navigation, ArrowRight } from 'lucide-react'
 import LocationFields from './LocationFields'
 import RideOptions from './RideOptions'
 
-const API_URL = 'http://10.71.144.216:5000'
+const API_URL = import.meta.env.VITE_API_URL
 
 function BookingCard() {
   const navigate = useNavigate()

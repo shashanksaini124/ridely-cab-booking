@@ -1,5 +1,5 @@
 
-const API_URL = 'http://10.71.144.216:5000/api/auth'
+const API_URL = `${import.meta.env.VITE_API_URL}/api/auth`
 
 async function sendAuthRequest(endpoint, data) {
   const response = await fetch(`${API_URL}/${endpoint}`, {
